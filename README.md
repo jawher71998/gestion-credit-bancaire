@@ -78,7 +78,8 @@ tableau de bord admin, dossier en cours de traitement)*
 
 ## 👤 Auteur
 
-Projet réalisé par [Votre nom] — [Votre lien LinkedIn / portfolio]
+Projet réalisé par Jawher Sbabti — www.linkedin.com/in/jawher-sbabti
+
 
 ---
 
