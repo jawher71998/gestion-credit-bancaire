@@ -1,0 +1,14 @@
+# Documents uploadés par les utilisateurs (données de test / réelles)
+uploads/*
+!uploads/.htaccess
+
+# Script de première installation (contient un mot de passe par défaut)
+admin/premiere_installation.php
+
+# Fichiers systèmes
+.DS_Store
+Thumbs.db
+
+# Éventuels fichiers de config locaux avec identifiants
+config.local.php
+.env

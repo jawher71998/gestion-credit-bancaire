@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financement — Simulez et déposez votre demande de crédit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-zitouna.png" alt="Banque Zitouna" class="brand-logo">
+      <span class="brand-name">Financement<span class="brand-dot">.</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="#solutions">Solutions</a>
+      <a href="#simulateur">Simuler</a>
+      <a href="#etapes">Comment ça marche</a>
+      <a href="a-propos.php">À propos</a>
+      <a href="suivi.php">Suivre une demande</a>
+    </nav>
+    <a href="login.php" class="btn btn-ghost btn-small">Espace client</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <h1>Le crédit qui&nbsp;respecte<br>vos&nbsp;principes.</h1>
+        <p class="hero-lede">
+          Simulez votre financement, déposez votre dossier en ligne et suivez
+          son étude étape par étape — pour un crédit immobilier, auto ou
+          consommation, en formule conventionnelle ou conforme à la Charia.
+        </p>
+        <div class="hero-actions">
+          <a href="#simulateur" class="btn btn-primary">Simuler mon crédit</a>
+          <a href="suivi.php" class="btn btn-outline">Suivre ma demande</a>
+        </div>
+        <p class="hero-note">Réponse de principe sous 48h ouvrées, sans engagement.</p>
+      </div>
+
+      <div class="hero-panel" id="simulateur">
+        <div class="panel-head">
+          <span class="panel-eyebrow">Simulateur</span>
+          <h2>Estimez votre mensualité</h2>
+        </div>
+
+        <div class="field">
+          <label for="type-credit">Type de financement</label>
+          <select id="type-credit">
+            <option value="1" data-taux="6.5" data-min="30000" data-max="500000">Immobilier — Mourabaha (6,5&nbsp;%)</option>
+            <option value="2" data-taux="7" data-min="10000" data-max="150000">Auto — Ijara (7&nbsp;%)</option>
+            <option value="3" data-taux="8.5" data-min="1000" data-max="50000">Consommation (8,5&nbsp;%)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <div class="field-label-row">
+            <label for="montant">Montant souhaité</label>
+            <output id="montant-val">50 000 DT</output>
+          </div>
+          <input type="range" id="montant" min="1000" max="500000" step="1000" value="50000">
+        </div>
+
+        <div class="field">
+          <div class="field-label-row">
+            <label for="duree">Durée de remboursement</label>
+            <output id="duree-val">60 mois</output>
+          </div>
+          <input type="range" id="duree" min="6" max="300" step="6" value="60">
+        </div>
+
+        <div class="panel-result">
+          <span class="result-label">Mensualité estimée</span>
+          <span class="result-value"><span id="mensualite">965,420</span> <small>DT / mois</small></span>
+        </div>
+
+        <a href="demande.php" id="demande-link" class="btn btn-primary btn-block">Démarrer ma demande</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="solutions" id="solutions">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Trois façons de financer votre projet</h2>
+        <p>Chaque solution est adossée à un mode de financement clair, avec un taux fixé dès le départ.</p>
+      </div>
+
+      <div class="solutions-grid">
+        <article class="solution-card">
+          <span class="solution-index">Immobilier</span>
+          <h3>Crédit Mourabaha</h3>
+          <p>Pour l'achat d'un logement, d'un terrain ou d'un local. La banque achète le bien et vous le
+             revend à un prix convenu à l'avance, remboursable sur 5 à 25 ans.</p>
+          <span class="solution-rate">à partir de 6,5&nbsp;%</span>
+        </article>
+
+        <article class="solution-card solution-card--accent">
+          <span class="solution-index">Auto</span>
+          <h3>Crédit-bail Ijara</h3>
+          <p>Financez un véhicule neuf ou d'occasion par crédit-bail : la banque acquiert le bien et vous
+             le loue avec option d'achat en fin de contrat.</p>
+          <span class="solution-rate">à partir de 7&nbsp;%</span>
+        </article>
+
+        <article class="solution-card">
+          <span class="solution-index">Consommation</span>
+          <h3>Crédit personnel</h3>
+          <p>Pour vos besoins ponctuels — équipement, études, événements familiaux. Montant et durée
+             flexibles, réponse rapide.</p>
+          <span class="solution-rate">à partir de 8,5&nbsp;%</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="etapes" id="etapes">
+    <div class="wrap">
+      <div class="section-head section-head--light">
+        <h2>Le parcours de votre demande</h2>
+        <p>Quatre étapes, du dépôt du dossier au déblocage des fonds.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-number">01</span>
+          <h3>Vous simulez</h3>
+          <p>Ajustez montant et durée pour trouver la mensualité qui vous convient.</p>
+        </li>
+        <li class="step">
+          <span class="step-number">02</span>
+          <h3>Vous déposez votre dossier</h3>
+          <p>Formulaire en ligne et pièces justificatives téléversées en quelques minutes.</p>
+        </li>
+        <li class="step">
+          <span class="step-number">03</span>
+          <h3>Nos conseillers étudient</h3>
+          <p>Un agent puis, selon le montant, le chef d'agence examinent votre dossier.</p>
+        </li>
+        <li class="step">
+          <span class="step-number">04</span>
+          <h3>Vous êtes financé</h3>
+          <p>Réponse motivée et, en cas d'accord, échéancier de remboursement généré aussitôt.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="wrap trust-inner">
+      <div class="trust-stat">
+        <strong>48h</strong>
+        <span>délai moyen d'étude d'un dossier</span>
+      </div>
+      <div class="trust-stat">
+        <strong>3</strong>
+        <span>formules de financement disponibles</span>
+      </div>
+      <div class="trust-stat">
+        <strong>100%</strong>
+        <span>suivi en ligne, de la demande au déblocage</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="brand-name">Financement<span class="brand-dot">.</span></span>
+      <p class="footer-note">© 2026 Banque Zitouna — Projet de Fin d'Études, BTS Informatique de Gestion</p>
+    </div>
+    <div class="footer-links">
+      <a href="#solutions">Solutions</a>
+      <a href="#simulateur">Simulateur</a>
+      <a href="suivi.php">Suivi de dossier</a>
+      <a href="login.php">Connexion</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/simulateur.js"></script>
+</body>
+</html>
